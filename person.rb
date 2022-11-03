@@ -1,10 +1,11 @@
-require './nameable.rb'
+require './nameable'
 
 class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id
 
   def initialize(age, name = 'unknown', parent_permmission: true)
+    super()
     @id = Random.rand(1..500)
     @name = name
     @age = age
