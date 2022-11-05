@@ -46,9 +46,9 @@ class App
     puts 'Person created successfully'
   end
 
-  def create_student(name, age, parent_permmission, classroom_)
-    classroom = Classroom.new(classroom_)
-    student = Student.new(age, name, parent_permmission)
+  def create_student(name, age, parent_permmission, classroom)
+    classroom = Classroom.new(classroom)
+    student = Student.new(classroom, age, name, parent_permmission)
     @people << student
   end
 
@@ -89,6 +89,7 @@ class App
       puts "Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
     end
   end
+
   def run()
     puts 'run has been called'
     prompt
