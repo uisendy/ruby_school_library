@@ -93,5 +93,4 @@ class App
     puts 'run has been called'
     prompt
   end
-  
 end
