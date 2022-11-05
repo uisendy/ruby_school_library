@@ -89,9 +89,9 @@ class App
       puts "Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
     end
   end
-
   def run()
     puts 'run has been called'
     prompt
   end
+  
 end
