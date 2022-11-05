@@ -48,7 +48,7 @@ class App
 
   def create_student(name, age, parent_permmission, classroom)
     classroom = Classroom.new(classroom)
-    student = Student.new(classroom, age, name, parent_permmission)
+    student = Student.new(classroom, age, name, parent_permmission: parent_permmission)
     @people << student
   end
 
@@ -77,7 +77,7 @@ class App
     date = gets.chomp
     book = @books[selected_book_option]
     person = @people[selected_person_option]
-    rental = Rental.new(date, book, person)
+    rental = Rental.new(date, person, book)
     @rentals << rental
     puts 'Rental created successfully'
   end
