@@ -57,7 +57,15 @@ class App
     @people << teacher
   end
 
-  
+  def create_book
+    print 'Title: '
+    title = gets.chomp
+    print 'Author: '
+    author = gets.chomp
+    book = Book.new(title, author)
+    @books << book
+    puts 'Book created successfully'
+  end
 
   def run()
     puts 'run has been called'
