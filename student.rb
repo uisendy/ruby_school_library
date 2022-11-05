@@ -4,6 +4,7 @@ class Student < Person
   def initialize(classroom, age, name = 'unknown', parent_permmission: true)
     super(age, name, parent_permmission: true)
     @classroom = classroom
+    @parent_permmission = parent_permmission
   end
 
   def classroom(classroom)
